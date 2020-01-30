@@ -1,10 +1,8 @@
 import { Controller } from "stimulus";
-let Datastore = require('nedb');
-const EMPTY_STRING = "";
+import {EMPTY_STRING, TODO_STORAGE_KEY} from "../common";
 
 export default class extends Controller {
     static targets = ['name'];
-    todoItems = new Datastore();
     itemsToAdd = [];
 
     connect() {
@@ -13,11 +11,7 @@ export default class extends Controller {
 
     add() {
         this.itemsToAdd.push(this.name);
-        this.todoItems.insert(this.itemsToAdd, function(err, docs) {
-            docs.forEach(function(d) {
-                console.log('Added item:', d);
-            });
-        });
+        localStorage && localStorage.setItem(TODO_STORAGE_KEY, JSON.stringify(this.name));
         this.clearInput();
     }
 
