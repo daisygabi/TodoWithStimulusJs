@@ -11,7 +11,7 @@ export default class extends Controller {
 
     add() {
         this.itemsToAdd.push(this.name);
-        localStorage && localStorage.setItem(TODO_STORAGE_KEY, JSON.stringify(this.name));
+        localStorage && localStorage.setItem(TODO_STORAGE_KEY, JSON.stringify(this.itemsToAdd));
         this.clearInput();
     }
 
