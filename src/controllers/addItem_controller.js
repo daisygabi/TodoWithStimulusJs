@@ -4,7 +4,7 @@ const EMPTY_STRING = "";
 
 export default class extends Controller {
     static targets = ['name'];
-    users = new Datastore();
+    todoItems = new Datastore();
     itemsToAdd = [];
 
     connect() {
@@ -13,7 +13,7 @@ export default class extends Controller {
 
     add() {
         this.itemsToAdd.push(this.name);
-        this.users.insert(this.itemsToAdd, function(err, docs) {
+        this.todoItems.insert(this.itemsToAdd, function(err, docs) {
             docs.forEach(function(d) {
                 console.log('Added item:', d);
             });
