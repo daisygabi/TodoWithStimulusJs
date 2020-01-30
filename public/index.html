@@ -1,11 +1,44 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="main.css">
-  <script src="bundle.js" async></script>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <title>TODO app with StimulusJs</title>
+    <script src="bundle.js" async></script>
 </head>
-<body>
-  <h1 data-controller="example"></h1>
+<body class="bg-white font-serif">
+<div class="min-h-screen text-center">
+    <div class="w-full flex flex-col justify-center items-center bg-gray-100 py-12 mb-8 border-b">
+        <h1 class="px-4 mb-10 py-4 text-center font-thin text-xl border-t-2 border-b-2 border-gray-200">TODO app with
+            StimulusJs</h1>
+        <a href="https://github.com/rossmcneil/free-tailwindcss-layouts"
+           class="bg-blue-200 text-blue-700 py-3 px-4 rounded-sm no-underline text-xs inline-block hover:bg-blue-300 hover:shadow-lg">View
+            on Github</a>
+    </div>
+
+    <div class="container mx-auto flex justify-start items-start flex-wrap">
+        <div class="w-full p-4">
+            <div class="block rounded-sm w-full h-screen relative overflow-hidden shadow bg-white">
+                <div data-controller="addItem">
+                    <div class="flex flex-row bg-gray-200 w-full">
+                        <input data-target="addItem.name" type="text" placeholder="What is on your mind?"
+                               class="text-gray-700 text-center px-4 py-2 m-2"/>
+                        <button data-action="addItem#add" class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
+                            Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="w-full bg-white border-t font-thin">
+    <div class="container mx-auto max-w-xl py-6 text-xs text-center">
+        Created with &#x1F49B; by <a href="https://digizu.co.uk" class="text-black">Gabi</a>. Design by <a
+            href="https://templates.digizu.co.uk/" class="text-black">Tailwind CSS Free templates.</a>.
+    </div>
+</footer>
 </body>
 </html>

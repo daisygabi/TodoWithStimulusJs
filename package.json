@@ -1,20 +1,36 @@
 {
-  "name": "stimulus-starter",
+  "name": "todo-with-stimulusjs",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "node server.js"
+    "build": "postcss css/tailwind.css -o public/buid/tailwind.css"
   },
   "dependencies": {
     "@babel/core": "^7.7.7",
     "@babel/plugin-proposal-class-properties": "^7.7.4",
     "@babel/preset-env": "^7.7.7",
+    "autoprefixer": "^9.7.4",
     "babel-loader": "^8.0.6",
     "express": "^4.17.1",
+    "nedb": "^1.8.0",
+    "postcss-cli": "^7.1.0",
     "stimulus": "^1.1.1",
+    "tailwindcss": "^1.1.4",
     "webpack": "^4.41.4",
     "webpack-dev-middleware": "^3.7.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stimulusjs/stimulus-starter.git"
+  },
+  "author": "Gabi",
+  "description": "A preconfigured blank slate for exploring [Stimulus](https://github.com/stimulusjs/stimulus). Jump to [The Stimulus Handbook](https://stimulusjs.org/handbook/introduction) for an introduction.",
+  "bugs": {
+    "url": "https://github.com/stimulusjs/stimulus-starter/issues"
+  },
+  "homepage": "https://github.com/stimulusjs/stimulus-starter#readme",
+  "devDependencies": {},
+  "keywords": ["looking for new opportunities", "remote software developer", "developer", "another todo app", "StimulusJs", "learning"]
 }
