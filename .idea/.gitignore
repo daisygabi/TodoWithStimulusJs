@@ -1,16 +1,15 @@
 # Default ignored files
-/workspace.xml
-
-# IntelliJ
 *.iml
-.idea/vcs.xml
-.idea/workspace.xml
-.idea/tasks.xml
-.idea/gradle.xml
-.idea/assetWizardSettings.xml
-.idea/dictionaries
-.idea/libraries
-.idea/caches
-.idea/misc.xml
-.idea
-.idea/inspectionProfiles/
+/vcs.xml
+/misc.xml
+/modules.xml
+/workspace.xml
+/tasks.xml
+/gradle.xml
+/assetWizardSettings.xml
+/dictionaries
+/libraries
+/caches
+
+# Log Files
+*.log
