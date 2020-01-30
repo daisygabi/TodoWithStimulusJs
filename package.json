@@ -14,7 +14,6 @@
     "autoprefixer": "^9.7.4",
     "babel-loader": "^8.0.6",
     "express": "^4.17.1",
-    "nedb": "^1.8.0",
     "postcss-cli": "^7.1.0",
     "stimulus": "^1.1.1",
     "tailwindcss": "^1.1.4",
@@ -32,5 +31,12 @@
   },
   "homepage": "https://github.com/stimulusjs/stimulus-starter#readme",
   "devDependencies": {},
-  "keywords": ["looking for new opportunities", "remote software developer", "developer", "another todo app", "StimulusJs", "learning"]
+  "keywords": [
+    "looking for new opportunities",
+    "remote software developer",
+    "developer",
+    "another todo app",
+    "StimulusJs",
+    "learning"
+  ]
 }
