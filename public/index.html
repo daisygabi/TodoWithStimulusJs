@@ -20,18 +20,25 @@
     <div class="container mx-auto flex justify-start items-start flex-wrap">
         <div class="w-full p-4">
             <div class="block rounded-sm w-full h-screen relative overflow-hidden shadow bg-white">
-                <div data-controller="addItem">
+                <div data-controller="todoList">
                     <div class="flex flex-row bg-gray-200 w-full">
-                        <input data-target="addItem.name" type="text" placeholder="What is on your mind?"
+                        <input data-target="todoList.name" type="text" placeholder="What is on your mind?"
                                class="text-gray-700 text-center px-4 py-2 m-2"/>
-                        <button data-action="addItem#add" class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
+                        <button data-action="todoList#add" class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
                             Add
                         </button>
                     </div>
+                    <div>
+                        <ul data-target="todoList.show">
+                            <template data-target="todoList.template">
+                                <li data-controller="todoItem" class="flex m-5 p-2 items-start content-start bg-red-100">
+                                    <label data-target="todoItem.name"></label>
+                                </li>
+                            </template>
+                        </ul>
+                    </div>
                 </div>
-                <div data-controller="todoList">
-                    <ul data-target="todoList.item"></ul>
-                </div>
+
             </div>
         </div>
     </div>
